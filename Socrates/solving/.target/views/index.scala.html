@@ -1,0 +1,15 @@
+@(solutionForm: Form[Socrates])
+
+@import helper._
+
+@main(title = "form 1") {
+    
+       
+    @form(action = routes.Application.solve, args = 'id -> "solutionform") {    
+        @inputText(field = solutionForm("a"),args = '_label -> "a ="
+        )@inputText(field = solutionForm("b"),args = '_label -> "b ="
+        )@inputText(field = solutionForm("c"),args = '_label -> "c ="
+        )
+        <input type="submit" >
+    }   
+}
